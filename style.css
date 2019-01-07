@@ -1,10 +1,13 @@
 html * {
     box-sizing: border-box;
 }
-body{
-    margin: 0px;
-    padding: 0px;
-}
+
+body {
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+   
 .hdd{
     text-decoration: none;
 }
@@ -72,6 +75,8 @@ body{
 }
 .aa{
     text-decoration: none;
+    top: 35px;
+    position: relative;
 }
 .aa:hover{
     color: #fff;
@@ -87,36 +92,53 @@ header{
     align-items: center;
     
 }
-
-header nav {
-    
+.menu{
+    display: block;
     right: 50px;
     position: absolute;
     top: 35px;
     
-   
-   
-   align-items: center;
-   justify-content: center;
-
+    height: 70px;
+    line-height: 70px;
     
     
 }
-ul {
-   list-style: none;
-   padding-right: 19px;
-   
+label{/*لك لما ما بكون أيليمنت مااااااااااااا بدووووووووو نقططططططططة .!.!.!.!.!. مشان الوقت مو مشان شي*/
+    margin: 0 40px 0 0;
+   right: 0px;
+    font-size: 26px;
+    position: absolute;
+    display: block;
+    width: 26px;
+    bottom: 35px;
+    display: none;
+}
+#toggle{
+    display: block;
+    right: 0px;
+    position: absolute;
+    bottom: 61px;
+    display: none;
+}
+
+ul{
+    width: 100%;
+    padding-left: 0;
+    
 }
 ul li{
+    clear: right;
     text-align: center;
     display:inline-block;
     padding: 11px;
+    
     font-weight: 700;
     font-size: 20px;
     font-family: 'Catamaran', sans-serif;
     color: aliceblue;
     letter-spacing: 0.3px;
-    
+    margin: 2px 2px;
+    line-height: 70px;
 
     
 }
@@ -134,11 +156,11 @@ nav a{
 li::after{
     content:'';
     display: block;
-    height: 0px;
+    height: 2.8px;
     width: 0px;
     background: aliceblue;
     transition: all 0.1s;
-    top: -5px;
+    top: -27px;
     position: relative;
     
 }
@@ -155,11 +177,13 @@ li:hover::after{
     width: 79.5px;
     background: aliceblue;
     transition: .7s;
+    
 }
 
 li.igh:hover::after{
     
     width: 63.7px;
+    
     
 }
 .igh:hover{
@@ -238,15 +262,15 @@ section{
     
 }
 .scnt{
-    color:  #1D3B8B;
+    color:  #1E3C8B;
     position: relative;
  }
  .frst{
-     color:  #1D3B8B;
+     color:  #1E3C8B;
      position: relative;
   }
  .thrd{
-     color: #1D3B8B;
+     color: #1E3C8B;
      font-size: 33px;
      font-weight: bold;
      font-family: 'Amatic SC', cursive;
@@ -277,7 +301,7 @@ section{
 
 
 h1{
-    font-size-adjust: inherit;
+    
     font-size: 70px;
     line-height: -3px;
     letter-spacing: -3px;
@@ -353,3 +377,176 @@ footer{
     
     
 }
+@media only screen and (max-width: 766px){
+    label {
+        
+   right: 0px;
+   top: 30px;
+   width: 16px;
+    font-size: 27px;
+    position: fixed;
+    display: block;
+    height: 10px;
+    bottom: 35px;
+    cursor: pointer;
+    
+    
+
+    }
+  
+    .menu{
+        width: 100%;
+        
+        height: auto;
+        z-index: 2;
+       
+    }
+    .ann{
+        z-index: 4;
+    }
+    .igh{
+        margin-right: 0;
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+        
+        width: 100%;
+        right: 50px;
+        left: 50px;
+        background-color: rgba(19, 17, 17, 0.719);
+        position: fixed;
+        display: block;
+        top: 62px;
+        z-index: 3;
+    }
+    ul li{
+        display: none;
+        margin: 10px;
+        max-width: 100%;
+        
+        padding: 0;
+        top: 29px;
+        
+        
+        line-height: 30px;
+        position: relative;
+        
+        z-index: 3;
+        
+        
+    }
+    
+    
+    #toggle:checked + ul li{
+        display: block;
+        
+    }
+    #toggle:checked + ul{
+        height: 60%;
+        padding-bottom: 40px;
+    }
+   
+    h1{
+        z-index: 1;
+    }
+    .dropdown-menu {
+        display: none !important;
+    }
+    
+    
+    
+}
+@media only screen and (max-width: 1005px) {
+        
+    h1 {
+        
+        font-size: 50px;
+        max-width: 600px;
+        top: 165px;
+        
+        
+        
+        left: 138px;
+        
+        
+        
+        
+    }
+    ul{
+        right: -30px;
+        position: relative;
+        
+     }
+    ul li{
+        font-size: 18px;
+        
+        
+     }
+     ul li img{
+        width: 32x;
+        height:22px;
+        
+        
+    }
+    .aa{
+        font-size: 45px;
+    }
+    .hdd{
+        font-size: 50px;
+    }
+    }
+
+   
+    @media only screen and (max-width: 766px){
+        h1 {
+        
+            font-size: 35px;
+            max-width: 400px;
+            top: 165px;
+            
+            
+            
+            left: 100px;
+            
+            
+            
+            
+        }
+        .aa{
+            font-size: 28px;
+        }
+        .hdd{
+            font-size: 33px;
+        }
+        
+    }
+    @media only screen and (max-width: 470px){
+        .aa{
+            font-size: 20px;
+        }
+        .hdd{
+            font-size: 25px;
+        }
+
+    }
+    @media only screen and (max-width: 354px){
+        h1{
+            font-size: 23px;
+            max-width: 300px;
+            top: 185px;
+            
+            
+            left: 70px;
+            
+        }
+        .aa{
+            font-size: 18px;
+        }
+        .hdd{
+            font-size: 23px;
+        }
+        
+    }
+       
+     
